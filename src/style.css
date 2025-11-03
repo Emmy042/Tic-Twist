@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    background-image: linear-gradient(90deg,#080705, #40434E);
+    color: #FFFFFF;
+    font-family: "Bitcount Grid Single", system-ui;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    overflow-x: hidden;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#footer a {
+  text-decoration: none;
+  color: #F26430;
+  font-size: larger;
+
+}
+
+a:hover {
+  color: gold;
+}
+
+a:visited {
+  color: #F26430;
+}
+
+.header {
+    
+    margin-bottom: 80px;
+}
+
+#container {
+    background-color: #F26430 ;
+    width: 600px;
+    height: 250px;
+    border: 1px solid black;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    
+}
+
+#container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+#row-one {
+    display: flex;
+    gap: 110px;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    
+
+}
+
+#row-two {
+    display: flex;
+    gap: 110px;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+    
+}
+
+#row-three {
+    display: flex;
+    gap: 110px;
+    justify-content: center;
+    margin-bottom: 5px;
+    
+    
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.flick {
+    color: #F26430 ;
+    font-size: larger;
+}
+
+.Cell {
+    width: 80px;
+    height: 50px;
+    padding: 7px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    
+}
+
+.cell-img{
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: 30px;
+}
+
+.play-img{
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: 30px;
+}
+
+#game-message {
+  position: fixed;
+  top: 10px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 15px 25px;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 9999;
+}
+
+#game-message.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+#game-message.win {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+#game-message.lose {
+  background: linear-gradient(90deg, #dc2626, #b91c1c);
+}
+
+#game-message.info {
+  background: linear-gradient(90deg, #3b82f6, #1e40af);
+}
+
+
+
+#reset-btn {
+    display: block;
+    padding: 10px 20px;
+    font-size: large;
+    margin-top: 50px;
+    font-family: inherit;
+}
+
+#reset-btn:hover {
+    background-color: #40434E;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* 🌍 RESPONSIVE - NO HORIZONTAL SCROLL */
+
+@media (max-width: 1200px) {
+  #container {
+    width: 90%;
+    max-width: 550px;
+    height: 230px;
+  }
+
+  #row-one, #row-two, #row-three {
+    gap: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  #container {
+    width: 90%;
+    max-width: 480px;
+    height: 210px;
+  }
+
+  #row-one, #row-two, #row-three {
+    gap: 80px;
+  }
+
+  .Cell {
+    width: 75px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  #container {
+    width: 90%;
+    max-width: 420px;
+    height: auto;
+  }
+
+  #row-one, #row-two, #row-three {
+    gap: 60px;
+  }
+
+  .Cell {
+    width: 70px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 600px) {
+  #container {
+    width: 95%;
+    height: auto;
+  }
+
+  #row-one, #row-two, #row-three {
+    gap: 45px;
+  }
+
+  .Cell {
+    width: 65px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  #container {
+    width: 95%;
+    height: auto;
+  }
+
+  #row-one, #row-two, #row-three {
+    gap: 35px;
+  }
+
+  .Cell {
+    width: 55px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 360px) {
+  #container {
+    width: 90%;
+    height: auto;
+  }
+
+  #row-one, #row-two, #row-three {
+    gap: 25px;
+  }
+
+  .Cell {
+    width: 50px;
+    height: 35px;
+  }
+
+  #reset-btn {
+    font-size: medium;
+    padding: 8px 16px;
+  }
+}
+
